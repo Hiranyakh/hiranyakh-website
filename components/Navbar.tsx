@@ -1,70 +1,67 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+
+const menuItems = [
+  { name: "Home", href: "#" },
+  { name: "About", href: "#about" },
+  { name: "Services", href: "#services" },
+  { name: "Programs", href: "#programs" },
+  { name: "Resources", href: "#resources" },
+  { name: "Contact", href: "#contact" },
+];
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-gray-200">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-4">
+    <header className="sticky top-0 z-50 border-b border-white/20 bg-white/80 backdrop-blur-xl">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
 
-        {/* Logo + Brand */}
+        {/* Logo */}
 
-        <div className="flex items-center gap-4">
+        <Link href="/" className="flex items-center gap-3">
 
           <Image
             src="/logos/logo.png"
-            alt="Hiranyakh Chatterjee"
-            width={60}
-            height={60}
+            alt="Hiranyakh"
+            width={54}
+            height={54}
+            priority
           />
 
           <div>
 
-            <h1 className="text-2xl font-bold text-[#0F4C81]">
-              Hiranyakh Chatterjee
-            </h1>
+            <h2 className="text-xl font-bold text-[#0F4C81]">
+              HIRANYAKH
+            </h2>
 
-            <p className="text-sm text-gray-600">
-              Clinical Nutritionist • Wellness Coach • Business Mentor
+            <p className="text-xs text-gray-500">
+              Clinical Nutrition • Wellness • Business
             </p>
 
           </div>
 
-        </div>
+        </Link>
 
-        {/* Menu */}
+        {/* Desktop Menu */}
 
-        <nav className="hidden lg:flex gap-8 font-medium">
+        <nav className="hidden items-center gap-8 lg:flex">
 
-          <a href="#" className="hover:text-[#10B981] transition">
-            Home
-          </a>
-
-          <a href="#" className="hover:text-[#10B981] transition">
-            About
-          </a>
-
-          <a href="#" className="hover:text-[#10B981] transition">
-            Wellness
-          </a>
-
-          <a href="#" className="hover:text-[#10B981] transition">
-            Financial Freedom
-          </a>
-
-          <a href="#" className="hover:text-[#10B981] transition">
-            Blog
-          </a>
-
-          <a href="#" className="hover:text-[#10B981] transition">
-            Contact
-          </a>
+          {menuItems.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className="font-medium text-gray-700 transition hover:text-[#10B981]"
+            >
+              {item.name}
+            </Link>
+          ))}
 
         </nav>
 
         {/* CTA */}
 
-        <button className="rounded-full bg-[#0F4C81] px-6 py-3 text-white font-semibold transition hover:bg-[#10B981]">
+        <button className="rounded-full bg-[#0F4C81] px-6 py-3 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-[#10B981] hover:shadow-lg">
           Book Consultation
         </button>
 

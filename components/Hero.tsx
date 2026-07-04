@@ -1,57 +1,127 @@
+"use client";
+
 import Image from "next/image";
+import FadeIn from "@/components/ui/FadeIn";
+import Button from "@/components/ui/Button";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-br from-blue-50 to-green-50">
-      <div className="max-w-7xl mx-auto px-8 py-20 flex flex-col-reverse lg:flex-row items-center">
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50">
 
-        <div className="lg:w-1/2">
+      {/* Background Glow */}
+      <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-blue-200/30 blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-emerald-200/30 blur-3xl"></div>
 
-          <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">
-            Helping People
-            <span className="text-blue-700"> Transform Their Health</span>,
-            <span className="text-green-600"> Build Wealth</span> &
-            <span className="text-blue-700"> Achieve Financial Freedom</span>
-          </h1>
+      <div className="mx-auto max-w-7xl px-6 pt-32 pb-24 lg:flex lg:items-center lg:justify-between">
 
-          <p className="mt-8 text-xl text-gray-600 leading-9">
-            Clinical Nutritionist • Wellness Coach • Business Mentor • Speaker
-          </p>
+        {/* Left Side */}
+        <div className="max-w-2xl">
 
-          <p className="mt-6 text-lg text-gray-500">
-            Empowering individuals through evidence-based nutrition,
-            lifestyle transformation, and proven business systems that
-            create lasting health and financial independence.
-          </p>
+          <FadeIn>
 
-          <div className="mt-10 flex gap-5 flex-wrap">
+            <span className="rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-700">
+              Clinical Nutritionist • Wellness Coach • Business Mentor
+            </span>
 
-            <button className="bg-blue-700 text-white px-8 py-4 rounded-xl hover:bg-blue-800 transition">
-              Book Consultation
-            </button>
+          </FadeIn>
 
-            <button className="border-2 border-blue-700 text-blue-700 px-8 py-4 rounded-xl hover:bg-blue-700 hover:text-white transition">
-              Explore Opportunities
-            </button>
+          <FadeIn delay={0.2}>
 
-          </div>
+            <h1 className="mt-8 text-5xl font-extrabold leading-tight text-gray-900 lg:text-7xl">
+
+              Transform Your
+              <span className="text-[#0F4C81]"> Health.</span>
+
+              <br />
+
+              Build
+              <span className="text-[#10B981]"> Sustainable Wealth.</span>
+
+              <br />
+
+              Live Financially Free.
+
+            </h1>
+
+          </FadeIn>
+
+          <FadeIn delay={0.4}>
+
+            <p className="mt-8 max-w-xl text-lg leading-8 text-gray-600">
+
+              Helping individuals achieve lasting health through
+              evidence-based nutrition while building sustainable
+              wealth through education, mentorship and proven systems.
+
+            </p>
+
+          </FadeIn>
+
+          <FadeIn delay={0.6}>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+
+              <Button>
+                Book Consultation
+              </Button>
+
+              <Button variant="secondary">
+                Explore Programs
+              </Button>
+
+            </div>
+
+          </FadeIn>
+
+          <FadeIn delay={0.8}>
+
+            <div className="mt-10 flex flex-wrap gap-6 text-gray-700">
+
+              <span>✔ Evidence-Based</span>
+              <span>✔ Personalized Coaching</span>
+              <span>✔ Holistic Wellness</span>
+
+            </div>
+
+          </FadeIn>
 
         </div>
 
-        <div className="lg:w-1/2 flex justify-center mb-12 lg:mb-0">
+        {/* Right Side */}
 
-          <Image
-  src="/images/hiranyakh-v2.png"
-  alt="Hiranyakh Chatterjee"
-  width={700}
-  height={840}
-  priority
-  className="w-full max-w-lg h-auto object-contain drop-shadow-2xl"
-/>
+        <FadeIn delay={0.4}>
 
-        </div>
+          <motion.div
+            animate={{
+              y: [0, -12, 0],
+            }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+            }}
+            className="mt-16 flex justify-center lg:mt-0"
+          >
+
+            <div className="rounded-[40px] bg-white p-5 shadow-2xl">
+
+              <Image
+                src="/images/hiranyakh-v2.png"
+                alt="Hiranyakh Chatterjee"
+                width={470}
+                height={580}
+                priority
+                className="rounded-3xl"
+              />
+
+            </div>
+
+          </motion.div>
+
+        </FadeIn>
 
       </div>
+
     </section>
   );
 }
