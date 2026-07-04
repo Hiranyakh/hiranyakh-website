@@ -25,7 +25,7 @@ export default function About() {
           <div className="flex justify-center">
 
             <Image
-              src="/images/hiranyakh.png"
+              src="/images/hiranyakh-v2.png"
               alt="Hiranyakh"
               width={420}
               height={520}
