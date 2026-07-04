@@ -1,44 +1,36 @@
 import type { Metadata } from "next";
+import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
 
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-poppins",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
 export const metadata: Metadata = {
-  title: "Hiranyakh Chatterjee | Clinical Nutritionist | Wellness Coach | Business Mentor",
+  title:
+    "Hiranyakh Chatterjee | Clinical Nutritionist | Wellness Coach | Business Mentor",
 
   description:
-    "Helping people transform their health, build sustainable wealth, and achieve financial freedom through clinical nutrition, wellness coaching, and business mentorship.",
+    "Helping people transform their health, build sustainable wealth and achieve financial freedom.",
 
   keywords: [
-    "Hiranyakh Chatterjee",
     "Clinical Nutritionist",
     "Dietitian",
-    "Nutritionist",
     "Weight Loss",
-    "Diabetes Management",
+    "Diabetes",
     "Gut Health",
-    "Autoimmune Diseases",
-    "Lifestyle Disease Management",
+    "Financial Freedom",
     "Wellness Coach",
     "Business Mentor",
-    "Financial Freedom",
-    "Health Coach",
-    "Nutrition Kolkata",
-    "Nutrition India",
+    "Hiranyakh Chatterjee",
   ],
-
-  authors: [
-    {
-      name: "Hiranyakh Chatterjee",
-    },
-  ],
-
-  creator: "Hiranyakh Chatterjee",
-
-  publisher: "Hiranyakh Chatterjee",
-
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
 export default function RootLayout({
@@ -48,7 +40,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${poppins.variable} ${inter.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
