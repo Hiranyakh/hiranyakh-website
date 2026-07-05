@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 import FadeIn from "@/components/ui/FadeIn";
 import Button from "@/components/ui/Button";
-import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
@@ -13,10 +13,11 @@ export default function Hero() {
       <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-blue-200/30 blur-3xl"></div>
       <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-emerald-200/30 blur-3xl"></div>
 
-      <div className="mx-auto max-w-7xl px-6 pt-32 pb-24 lg:flex lg:items-center lg:justify-between">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between px-6 pt-32 pb-24 lg:flex-row">
 
-        {/* Left Side */}
-        <div className="max-w-2xl">
+        {/* Left Content */}
+
+        <div className="max-w-xl">
 
           <FadeIn>
 
@@ -28,19 +29,23 @@ export default function Hero() {
 
           <FadeIn delay={0.2}>
 
-            <h1 className="mt-8 text-5xl font-extrabold leading-tight text-gray-900 lg:text-7xl">
+            <h1 className="mt-8 text-4xl font-extrabold leading-[1.15] text-gray-900 lg:text-6xl">
 
-              Transform Your
-              <span className="text-[#0F4C81]"> Health.</span>
-
-              <br />
-
-              Build
-              <span className="text-[#10B981]"> Sustainable Wealth.</span>
+              Transform Your{" "}
+              <span className="text-[#0F4C81]">
+                Health.
+              </span>
 
               <br />
 
-              Live Financially Free.
+              Build{" "}
+              <span className="text-[#10B981]">
+                Sustainable Wealth.
+              </span>
+
+              <br />
+
+              Achieve Financial Freedom.
 
             </h1>
 
@@ -48,11 +53,12 @@ export default function Hero() {
 
           <FadeIn delay={0.4}>
 
-            <p className="mt-8 max-w-xl text-lg leading-8 text-gray-600">
+            <p className="mt-8 max-w-lg text-lg leading-8 text-gray-600">
 
-              Helping individuals achieve lasting health through
-              evidence-based nutrition while building sustainable
-              wealth through education, mentorship and proven systems.
+              Helping individuals transform their health through
+              evidence-based nutrition while empowering them to build
+              sustainable wealth, stronger lifestyles and long-term
+              financial freedom.
 
             </p>
 
@@ -78,9 +84,11 @@ export default function Hero() {
 
             <div className="mt-10 flex flex-wrap gap-6 text-gray-700">
 
-              <span>✔ Evidence-Based</span>
+              <span>✔ Evidence-Based Nutrition</span>
+
               <span>✔ Personalized Coaching</span>
-              <span>✔ Holistic Wellness</span>
+
+              <span>✔ Business Mentorship</span>
 
             </div>
 
@@ -88,28 +96,29 @@ export default function Hero() {
 
         </div>
 
-        {/* Right Side */}
+        {/* Right Content */}
 
-        <FadeIn delay={0.4}>
+        <FadeIn delay={0.5}>
 
           <motion.div
             animate={{
-              y: [0, -12, 0],
+              y: [0, -10, 0],
             }}
             transition={{
               duration: 5,
               repeat: Infinity,
+              ease: "easeInOut",
             }}
-            className="mt-16 flex justify-center lg:mt-0"
+            className="mt-16 lg:mt-0"
           >
 
-            <div className="rounded-[40px] bg-white p-5 shadow-2xl">
+            <div className="rounded-[36px] bg-white/80 p-5 shadow-2xl backdrop-blur-md">
 
               <Image
                 src="/images/hiranyakh-v2.png"
                 alt="Hiranyakh Chatterjee"
-                width={470}
-                height={580}
+                width={430}
+                height={540}
                 priority
                 className="rounded-3xl"
               />

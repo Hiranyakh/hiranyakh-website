@@ -1,7 +1,8 @@
-import About from "@/components/About";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
+import JourneySection from "@/components/JourneySection";
+import About from "@/components/About";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <TrustBar />
+      <JourneySection />
       <About />
     </>
   );
