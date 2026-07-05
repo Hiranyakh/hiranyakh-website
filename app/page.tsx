@@ -2,7 +2,8 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import JourneySection from "@/components/JourneySection";
-import About from "@/components/About";
+import WhyChooseSection from "@/components/WhyChooseSection";
+import MeetHiranyakh from "@/components/MeetHiranyakh";
 
 export default function Home() {
   return (
@@ -11,7 +12,8 @@ export default function Home() {
       <Hero />
       <TrustBar />
       <JourneySection />
-      <About />
+      <WhyChooseSection />
+      <MeetHiranyakh />
     </>
   );
 }
