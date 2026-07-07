@@ -5,6 +5,10 @@ import JourneySection from "@/components/JourneySection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import MissionSection from "@/components/sections/MissionSection";
 import ServicesSection from "@/components/sections/ServicesSection";
+import EbookSection from "@/components/sections/EbookSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import CTASection from "@/components/sections/CTASection";
+import Footer from "@/components/layout/Footer";
 export default function Home() {
   return (
     <>
@@ -15,6 +19,10 @@ export default function Home() {
       <WhyChooseSection />
       <MissionSection />
       <ServicesSection />
+      <EbookSection />
+     <TestimonialsSection />
+     <CTASection />
+     <Footer />
     </>
   );
 }
