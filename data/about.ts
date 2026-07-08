@@ -6,7 +6,9 @@ export const aboutHero = {
   subtitle:
     "A journey inspired by family, guided by science, and dedicated to helping people achieve lasting health through evidence-based nutrition.",
 
-  image: "/images/hiranyakh-profilev2.png",
+  export const aboutHero = {
+  ...
+  image: "/images/hiranyakh-v2.png",
 };
 
 export const story = [
