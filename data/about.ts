@@ -6,9 +6,7 @@ export const aboutHero = {
   subtitle:
     "A journey inspired by family, guided by science, and dedicated to helping people achieve lasting health through evidence-based nutrition.",
 
-  export const aboutHero = {
-  ...
-  image: "/images/hiranyakh-v2.png",
+  image: "/images/hiranyakh-profilev2.png",
 };
 
 export const story = [
@@ -17,19 +15,16 @@ export const story = [
     content:
       "My professional journey began as an Electronics and Telecommunication Engineer. Engineering taught me to think logically, solve problems systematically, and never stop learning.",
   },
-
   {
     title: "The Father",
     content:
       "The birth of my son changed my life forever. As our family navigated unexpected health challenges, we searched for answers that could genuinely improve his quality of life.",
   },
-
   {
     title: "The Turning Point",
     content:
       "Discovering evidence-based nutrition transformed the way we understood health. Witnessing meaningful improvements inspired me to pursue Clinical Nutrition professionally.",
   },
-
   {
     title: "The Mission",
     content:
@@ -46,16 +41,17 @@ export const philosophy = {
   description:
     "Every recommendation I make is rooted in science, personalized to the individual and designed to create lasting lifestyle change—not temporary results.",
 };
+
 export const qualifications = [
   {
     title: "Clinical Nutritionist",
     institution: "Professional Certification",
-    image: "/images/certificates/nutrition-advisor-certificate.jpg",
+    image: "/images/certificates/clinical-nutritionist-certificate.jpg",
   },
   {
     title: "Nutrition Advisor",
     institution: "Professional Certification",
-    image: "/images/certificates/clinical-nutritionist-certificate.jpg",
+    image: "/images/certificates/nutrition-advisor-certificate.jpg",
   },
   {
     title: "Advanced Clinical Nutrition",
