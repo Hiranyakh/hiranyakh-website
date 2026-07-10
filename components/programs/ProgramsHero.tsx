@@ -8,9 +8,7 @@ export default function ProgramsHero() {
   return (
     <section className="bg-gradient-to-br from-[#0F4C81] via-[#145A92] to-[#10B981] py-28 text-white">
       <Container>
-
         <FadeIn>
-
           <div className="mx-auto max-w-4xl text-center">
 
             <span className="rounded-full bg-white/20 px-5 py-2 text-sm font-semibold backdrop-blur">
@@ -34,9 +32,7 @@ export default function ProgramsHero() {
             </div>
 
           </div>
-
         </FadeIn>
-
       </Container>
     </section>
   );

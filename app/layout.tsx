@@ -1,24 +1,14 @@
 import type { Metadata } from "next";
-import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-poppins",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
 export const metadata: Metadata = {
-  title:
-    "Hiranyakh Chatterjee | Clinical Nutritionist | Wellness Coach | Business Mentor",
+  title: {
+    default: "Hiranyakh's Wellness",
+    template: "%s | Hiranyakh's Wellness",
+  },
 
   description:
-    "Helping people transform their health, build sustainable wealth and achieve financial freedom.",
+    "Evidence-based Clinical Nutrition, Weight Management, Diabetes Care, Gut Health, Lifestyle Transformation and Wellness Coaching by Hiranyakh Chatterjee.",
 
   keywords: [
     "Clinical Nutritionist",
@@ -26,11 +16,32 @@ export const metadata: Metadata = {
     "Weight Loss",
     "Diabetes",
     "Gut Health",
-    "Financial Freedom",
-    "Wellness Coach",
-    "Business Mentor",
+    "PCOS",
+    "Nutrition",
+    "Wellness",
+    "Lifestyle",
     "Hiranyakh Chatterjee",
   ],
+
+  authors: [
+    {
+      name: "Hiranyakh Chatterjee",
+    },
+  ],
+
+  creator: "Hiranyakh Chatterjee",
+
+  metadataBase: new URL("https://www.hiranyakhchatterjee.com"),
+
+  openGraph: {
+    title: "Hiranyakh's Wellness",
+    description:
+      "Helping people transform their health through evidence-based nutrition.",
+    url: "https://www.hiranyakhchatterjee.com",
+    siteName: "Hiranyakh's Wellness",
+    locale: "en_IN",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -40,9 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${inter.variable}`}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
