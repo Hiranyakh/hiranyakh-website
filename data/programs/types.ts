@@ -23,4 +23,19 @@ export interface ProgramData {
 
   ctaTitle: string;
   ctaDescription: string;
+
+  transformation?: {
+    title: string;
+    subtitle: string;
+
+    beforeImage: string;
+    afterImage: string;
+
+    beforeWeight: string;
+    afterWeight: string;
+
+    story: string;
+
+    highlights: string[];
+  };
 }

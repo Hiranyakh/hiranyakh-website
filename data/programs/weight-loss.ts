@@ -69,6 +69,30 @@ const weightLoss: ProgramData = {
   ctaDescription:
     "Book your consultation today and begin your personalised transformation journey.",
 
+  transformation: {
+    title: "The Journey That Changed Everything",
+
+    subtitle:
+      "I lost 17 kilograms through evidence-based nutrition, consistency and sustainable habits. Today I help others achieve the same transformation.",
+
+    beforeImage: "/images/transformation/before.jpg",
+
+    afterImage: "/images/transformation/after.jpg",
+
+    beforeWeight: "84.2 kg",
+
+    afterWeight: "67.2 kg",
+
+    story:
+      "My journey wasn't about looking slimmer. It was about reclaiming my health, confidence and purpose. Losing 17 kilograms transformed my life and inspired me to study Clinical Nutrition so I could help others experience the same lasting change.",
+
+    highlights: [
+      "17 kg Personal Weight Loss",
+      "Evidence-Based Clinical Nutrition",
+      "Personalised Coaching",
+      "Sustainable Lifestyle Transformation",
+    ],
+  },
 };
 
 export default weightLoss;
