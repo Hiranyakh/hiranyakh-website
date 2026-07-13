@@ -24,6 +24,42 @@ export interface ProgramData {
   ctaTitle: string;
   ctaDescription: string;
 
+  /* -------------------------
+      NEW OPTIONAL SECTIONS
+  --------------------------*/
+
+  idealFor?: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    people: string[];
+  };
+
+  infoSection?: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    cards: {
+      title: string;
+      description: string;
+    }[];
+  };
+
+  symptoms?: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    items: string[];
+  };
+
+  foodGuide?: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    eat: string[];
+    avoid: string[];
+  };
+
   transformation?: {
     title: string;
     subtitle: string;
