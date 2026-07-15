@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
+import HeroV2 from "@/components/home/HeroV2";
 
 import TrustNumbers from "@/components/home/TrustNumbers";
 
@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <Navbar />
 
-      <Hero />
+      <HeroV2 />
 
       <TrustNumbers />
 
