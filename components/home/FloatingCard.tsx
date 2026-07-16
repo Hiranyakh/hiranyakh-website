@@ -2,62 +2,59 @@
 
 import { motion } from "framer-motion";
 
-type FloatingCardProps = {
-  icon: React.ReactNode;
+interface FloatingCardProps {
   title: string;
   subtitle: string;
   className?: string;
-};
+}
 
 export default function FloatingCard({
-  icon,
   title,
   subtitle,
   className = "",
 }: FloatingCardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      whileHover={{
-        y: -8,
-        scale: 1.03,
+      initial={{
+        opacity: 0,
+        y: 20,
+        scale: 0.95,
+      }}
+      animate={{
+        opacity: 1,
+        y: [0, -8, 0],
+        scale: 1,
       }}
       transition={{
-        duration: 0.35,
+        duration: 6,
+        repeat: Infinity,
+        ease: "easeInOut",
       }}
       className={`
         absolute
-        rounded-3xl
+        w-52
+        rounded-2xl
         border
-        border-white/30
+        border-white/60
         bg-white/70
+        px-5
+        py-4
+        shadow-xl
         backdrop-blur-xl
-        shadow-2xl
-        p-5
-        w-56
+        transition-all
+        duration-300
+        hover:-translate-y-2
+        hover:shadow-2xl
         ${className}
       `}
     >
-      <div className="flex items-center gap-4">
+      <h3 className="text-xl font-bold text-[#0F4C81]">
+        {title}
+      </h3>
 
-        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#10B981]/10 text-2xl">
-          {icon}
-        </div>
-
-        <div>
-
-          <h4 className="font-bold text-slate-900">
-            {title}
-          </h4>
-
-          <p className="text-sm text-slate-500">
-            {subtitle}
-          </p>
-
-        </div>
-
-      </div>
+      <p className="mt-1 text-sm text-slate-600">
+        {subtitle}
+      </p>
     </motion.div>
   );
 }

@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import FloatingCard from "./FloatingCard";
 import HeroBackground from "./HeroBackground";
 import HeroButtons from "./HeroButtons";
 import TrustBadge from "./TrustBadge";
@@ -9,7 +9,7 @@ export default function HeroV2() {
     <section className="relative overflow-hidden">
       <HeroBackground />
 
-      <div className="mx-auto flex min-h-[90vh] max-w-7xl flex-col items-center justify-center gap-14 px-6 py-20 lg:flex-row">
+      <div className="mx-auto flex min-h-[95vh] max-w-7xl flex-col items-center justify-center gap-14 px-6 py-20 lg:flex-row">
 
         {/* LEFT */}
 
@@ -29,7 +29,7 @@ export default function HeroV2() {
             Not Guesswork.
           </h1>
 
-          <p className="mt-8 max-w-xl text-lg leading-8 text-slate-600">
+          <p className="mt-8 max-w-lg text-lg leading-8 text-slate-600">
             Evidence-based clinical nutrition and personalised coaching
             designed to help you lose weight, manage diabetes,
             improve gut health and build healthy habits that last.
@@ -51,24 +51,40 @@ export default function HeroV2() {
 
         {/* RIGHT */}
 
-        <div className="relative flex flex-1 items-center justify-center">
+<div className="relative flex flex-1 items-center justify-center">
 
-          {/* Glow */}
+  {/* Background Glows */}
 
-          <div className="absolute h-[520px] w-[520px] rounded-full bg-sky-300/20 blur-[120px]" />
+  <div className="absolute h-[620px] w-[620px] rounded-full bg-sky-300/25 blur-[150px]" />
 
-          <Image
-            src="/images/hero/hiranyakh.png"
-            alt="Hiranyakh Chatterjee"
-            width={650}
-            height={760}
-            priority
-            className="relative z-10 h-auto w-full max-w-xl"
-          />
+  <div className="absolute h-[420px] w-[420px] rounded-full bg-emerald-300/20 blur-[120px]" />
+  <FloatingCard
+  title="17 kg"
+  subtitle="Personal Transformation"
+  className="-left-12 top-24 hidden lg:block"
+/>
 
-        </div>
+<FloatingCard
+  title="Clinical"
+  subtitle="Nutritionist"
+  className="-right-12 top-36 hidden lg:block"
+/>
 
-      </div>
+<FloatingCard
+  title="1:1"
+  subtitle="Health Coaching"
+ className="bottom-20 -left-30 z-20 hidden lg:block"
+/>
+  <Image
+    src="/images/hero/hiranyakh.png"
+    alt="Hiranyakh Chatterjee"
+    width={820}
+    height={980}
+    priority
+    className="relative z-10 h-auto w-full max-w-2xl drop-shadow-[0_40px_80px_rgba(15,76,129,0.25)]"
+  />
+    </div>
+    </div>
     </section>
   );
 }
