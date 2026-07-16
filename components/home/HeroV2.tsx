@@ -3,7 +3,6 @@ import FloatingCard from "./FloatingCard";
 import HeroBackground from "./HeroBackground";
 import HeroButtons from "./HeroButtons";
 import TrustBadge from "./TrustBadge";
-
 export default function HeroV2() {
   return (
     <section className="relative overflow-hidden">
@@ -59,21 +58,24 @@ export default function HeroV2() {
 
   <div className="absolute h-[420px] w-[420px] rounded-full bg-emerald-300/20 blur-[120px]" />
   <FloatingCard
+  icon="trophy"
   title="17 kg"
   subtitle="Personal Transformation"
-  className="-left-12 top-24 hidden lg:block"
+  className="-left-16 top-24 hidden lg:block z-20"
 />
 
 <FloatingCard
+  icon="stethoscope"
   title="Clinical"
-  subtitle="Nutritionist"
-  className="-right-12 top-36 hidden lg:block"
+  subtitle="Evidence-Based Nutrition"
+  className="-right-16 top-36 hidden lg:block z-20"
 />
 
 <FloatingCard
-  title="1:1"
-  subtitle="Health Coaching"
- className="bottom-20 -left-30 z-20 hidden lg:block"
+  icon="heart"
+  title="1:1 Coaching"
+  subtitle="Personalised Support"
+  className="-left-12 bottom-24 hidden lg:block z-20"
 />
   <Image
     src="/images/hero/hiranyakh.png"
