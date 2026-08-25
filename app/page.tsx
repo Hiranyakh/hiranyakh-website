@@ -1,3 +1,6 @@
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/layout/Footer";
+
 import HeroV2 from "@/components/home/HeroV2";
 import TransformationSection from "@/components/home/TransformationSection";
 import TrustNumbers from "@/components/home/TrustNumbers";
@@ -12,34 +15,37 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import CTASection from "@/components/sections/CTASection";
 
 import StorySection from "@/components/home/StorySection";
+
 export default function Home() {
   return (
-    <main>
-      
+    <>
+      <Navbar />
 
-      <HeroV2 />
+      <main>
+        <HeroV2 />
 
-      <TrustNumbers />
+        <TrustNumbers />
 
-      <TrustBar />
+        <TrustBar />
 
-      <JourneySection />
+        <JourneySection />
 
-      <StorySection />
+        <StorySection />
 
-      <ServicesSection />
+        <ServicesSection />
 
-      <MissionSection />
+        <MissionSection />
 
-      <TransformationSection />
-      
-      <EbookSection />
+        <TransformationSection />
 
-      <TestimonialsSection />
+        <EbookSection />
 
-      <CTASection />
+        <TestimonialsSection />
 
-      
-    </main>
+        <CTASection />
+      </main>
+
+      <Footer />
+    </>
   );
 }
