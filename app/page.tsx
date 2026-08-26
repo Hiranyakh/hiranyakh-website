@@ -4,7 +4,6 @@ import Footer from "@/components/layout/Footer";
 import HeroV2 from "@/components/home/HeroV2";
 import TransformationSection from "@/components/home/TransformationSection";
 import TrustNumbers from "@/components/home/TrustNumbers";
-
 import TrustBar from "@/components/TrustBar";
 import JourneySection from "@/components/JourneySection";
 
