@@ -51,6 +51,15 @@ export default function MasterclassForm({ masterclass }: Props) {
         bookingUrl.searchParams.set("email", payload.email);
         if (result.lead_id) bookingUrl.searchParams.set("user_id", result.lead_id);
 
+        bookingUrl.searchParams.set(
+       "metadata[masterclass_slug]",
+        masterclass.slug
+        );
+        bookingUrl.searchParams.set(
+        "metadata[masterclass_name]",
+        masterclass.name
+        );
+
         const trackingParams = [
           "utm_source",
           "utm_medium",
