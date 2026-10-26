@@ -1,3 +1,6 @@
+
+import type { Metadata } from "next";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/layout/Footer";
 
@@ -14,6 +17,22 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import CTASection from "@/components/sections/CTASection";
 
 import StorySection from "@/components/home/StorySection";
+
+export const metadata: Metadata = {
+  title: "Clinical Nutritionist | Hiranyakh's Wellness",
+  description:
+    "Consult Hiranyakh Chatterjee for personalised clinical nutrition, weight management, diabetes care, gut health, IBS, liver health, and lifestyle wellness.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Clinical Nutritionist | Hiranyakh's Wellness",
+    description:
+      "Personalised nutrition consultation for weight management, diabetes care, gut health, and overall wellness.",
+    url: "https://nutrition.hiranyakhchatterjee.com/",
+    type: "website",
+  },
+};
 
 export default function Home() {
   return (
